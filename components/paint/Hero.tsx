@@ -1,6 +1,16 @@
 import Image from "next/image";
 import { Noto_Serif_JP } from "next/font/google";
 
+import {
+  HiOutlineShieldCheck,
+  HiOutlineHomeModern,
+  HiOutlineSparkles,
+  HiArrowRight,
+  HiStar,
+  HiOutlineChevronDoubleDown,
+  HiOutlineClipboardDocumentCheck,
+} from "react-icons/hi2";
+
 const serif = Noto_Serif_JP({
   subsets: ["latin"],
   weight: ["400", "500", "600", "700"],
@@ -11,23 +21,17 @@ const strengths = [
   {
     title: "高品質な施工",
     description: "自社職人による確かな技術力",
-    icon: (
-      <path d="M12 3.5 5.5 6v5.2c0 4 2.7 7.7 6.5 9.3 3.8-1.6 6.5-5.3 6.5-9.3V6L12 3.5Zm0 4.2v8.5m-3.2-4.1 2.3 2.3 4.4-5" />
-    ),
+    icon: HiOutlineShieldCheck,
   },
   {
     title: "最適なご提案",
     description: "住まいの状態に合わせた最適な塗装プラン",
-    icon: (
-      <path d="m4.5 11.5 7.5-7 7.5 7m-13 0v7h11v-7M9.8 18.5v-4.8h4.4v4.8" />
-    ),
+    icon: HiOutlineHomeModern,
   },
   {
     title: "安心の保証",
     description: "施工後も長く寄り添うアフターサポート",
-    icon: (
-      <path d="M12 20.5s-7.3-4.1-7.3-10a4 4 0 0 1 7.3-2.3 4 4 0 0 1 7.3 2.3c0 5.9-7.3 10-7.3 10Z" />
-    ),
+    icon: HiOutlineSparkles,
   },
 ];
 
@@ -59,7 +63,7 @@ export default function Hero() {
         fill
         priority
         sizes="100vw"
-        className="object-cover object-right"
+        className="object-cover object-[70%_center] scale-105 brightness-90 contrast-110"
       />
 
       {/* Dark Overlay */}
@@ -103,7 +107,7 @@ export default function Hero() {
 
             <h1
               id="hero-title"
-              className={`${serif.className} mt-8 max-w-3xl text-[clamp(3rem,7vw,6.8rem)] font-semibold leading-[1.14] text-[#fffaf2]`}
+              className={`${serif.className} mt-8 max-w-4xl text-[clamp(3rem,6vw,6.5rem)] font-semibold leading-[1.18] tracking-[-0.02em] text-[#fffaf2]`}
             >
               塗装で守るのは、
               <br />
@@ -119,28 +123,25 @@ export default function Hero() {
             {/* Strength */}
 
             <div className="mt-14 grid max-w-3xl gap-8 sm:grid-cols-3">
-              {strengths.map((item) => (
-                <article
-                  key={item.title}
-                  className="border-[#c9a96a]/30 sm:border-l sm:pl-7 sm:first:border-l-0 sm:first:pl-0"
-                >
-                  <svg
-                    viewBox="0 0 24 24"
-                    aria-hidden="true"
-                    className="h-9 w-9 fill-none stroke-[#e6c985] stroke-[1.4]"
+              {strengths.map((item) => {
+                const Icon = item.icon;
+
+                return (
+                  <article
+                    key={item.title}
+                    className="text-center border-[#c9a96a]/30 sm:border-l sm:px-6 sm:first:border-l-0"
                   >
-                    {item.icon}
-                  </svg>
+                    <Icon className="mx-auto h-10 w-10 text-[#e6c985]" />
+                    <h3 className="mt-5 text-lg font-semibold text-[#fffaf2]">
+                      {item.title}
+                    </h3>
 
-                  <h3 className="mt-4 text-base font-semibold text-[#fffaf2]">
-                    {item.title}
-                  </h3>
-
-                  <p className="mt-2 text-sm leading-7 text-[#f3ead8]/78">
-                    {item.description}
-                  </p>
-                </article>
-              ))}
+                    <p className="mt-3 text-sm leading-7 text-[#f3ead8]/78">
+                      {item.description}
+                    </p>
+                  </article>
+                );
+              })}
             </div>
 
             {/* CTA */}
@@ -151,15 +152,9 @@ export default function Hero() {
                 aria-label="無料見積りへ進む"
                 className="inline-flex min-h-16 items-center justify-center gap-3 rounded-xl border border-[#c9a96a]/30 bg-[#005f3c] px-9 text-sm font-semibold text-white shadow-[0_24px_60px_rgba(0,0,0,.35)] transition-all duration-300 hover:-translate-y-1 hover:bg-[#0b7349] hover:shadow-2xl focus:outline-none focus:ring-2 focus:ring-[#d6b16f] focus:ring-offset-2 focus:ring-offset-[#06140f]"
               >
-                無料見積りはこちら
-                <svg
-                  viewBox="0 0 24 24"
-                  aria-hidden="true"
-                  className="h-5 w-5 fill-none stroke-current stroke-[2]"
-                >
-                  <path d="M5 12h14" />
-                  <path d="m13 5 7 7-7 7" />
-                </svg>
+                <HiOutlineClipboardDocumentCheck className="h-5 w-5" />
+                無料相談・お見積り
+                <HiArrowRight className="h-5 w-5 transition-transform duration-300 group-hover:translate-x-1" />
               </a>
 
               <a
@@ -168,14 +163,7 @@ export default function Hero() {
                 className="inline-flex min-h-16 items-center justify-center gap-3 rounded-xl border border-[#f8f3e8]/40 bg-black/15 px-9 text-sm font-semibold text-[#fffaf2] backdrop-blur-md transition-all duration-300 hover:-translate-y-1 hover:bg-white/10 hover:shadow-xl focus:outline-none focus:ring-2 focus:ring-[#d6b16f] focus:ring-offset-2 focus:ring-offset-[#06140f]"
               >
                 施工事例を見る
-                <svg
-                  viewBox="0 0 24 24"
-                  aria-hidden="true"
-                  className="h-5 w-5 fill-none stroke-current stroke-[2]"
-                >
-                  <path d="M5 12h14" />
-                  <path d="m13 5 7 7-7 7" />
-                </svg>
+                <HiArrowRight className="h-5 w-5 transition-transform duration-300 group-hover:translate-x-1" />
               </a>
             </div>
           </div>
@@ -192,7 +180,11 @@ export default function Hero() {
                   PERFORMANCE
                 </p>
 
-                <div className="flex text-[#e4c77f]">★★★★★</div>
+                <div className="flex gap-1 text-[#e4c77f]">
+                  {Array.from({ length: 5 }).map((_, i) => (
+                    <HiStar key={i} className="h-4 w-4" />
+                  ))}
+                </div>
               </div>
 
               <div className="mt-8 grid grid-cols-2 divide-x divide-[#c9a96a]/20">
@@ -203,11 +195,11 @@ export default function Hero() {
                     </p>
 
                     <p
-                      className={`${serif.className} mt-4 text-5xl leading-none text-[#e6c985]`}
+                      className={`${serif.className} mt-4 flex items-end text-5xl leading-none text-[#e6c985]`}
                     >
-                      {item.value}
+                      <span>{item.value}</span>
 
-                      <span className="ml-2 text-sm font-sans text-[#fffaf2]">
+                      <span className="ml-2 whitespace-nowrap text-base font-sans text-[#fffaf2]">
                         {item.unit}
                       </span>
                     </p>
@@ -241,12 +233,8 @@ export default function Hero() {
                   </p>
                 </div>
 
-                <div className="rounded-full border border-[#d6b16f]/30 px-5 py-3 text-center">
-                  <p className="text-xs tracking-[0.18em] text-[#d6b16f]">
-                    AFTER
-                  </p>
-
-                  <p className="mt-1 text-lg font-semibold text-white">CARE</p>
+                <div className="rounded-full border border-[#d6b16f]/30 p-4">
+                  <HiOutlineShieldCheck className="h-9 w-9 text-[#e6c985]" />
                 </div>
               </div>
             </aside>
@@ -261,10 +249,7 @@ export default function Hero() {
           SCROLL
         </div>
 
-        <span
-          aria-hidden="true"
-          className="mx-auto mt-3 block h-14 w-px origin-top animate-scroll-line bg-[#f8f3e8]/45"
-        />
+        <HiOutlineChevronDoubleDown className="mx-auto mt-3 h-5 w-5 animate-bounce text-[#f8f3e8]/70" />
       </div>
     </section>
   );
