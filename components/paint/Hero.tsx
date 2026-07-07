@@ -92,10 +92,10 @@ export default function Hero() {
       />
 
       <div className="relative z-10 mx-auto flex min-h-screen min-h-[100svh] max-w-7xl items-center px-6 pb-16 pt-28 sm:px-10 sm:pt-32 lg:px-10 lg:pb-20 lg:pt-28">
-        <div className="grid w-full items-end gap-14 lg:grid-cols-[minmax(0,1fr)_430px]">
+        <div className="grid w-full items-end gap-14 lg:grid-cols-[minmax(0,1.2fr)_380px]">
           {/* Left */}
 
-          <div className="max-w-3xl">
+          <div className="max-w-4xl">
             <p className="inline-flex items-center gap-4 text-xs font-medium tracking-[0.28em] text-[#d6b16f] uppercase sm:text-sm">
               <span className="h-px w-10 bg-[#d6b16f]" aria-hidden="true" />
               地域密着20年の信頼と実績
@@ -107,7 +107,7 @@ export default function Hero() {
 
             <h1
               id="hero-title"
-              className={`${serif.className} mt-8 max-w-4xl text-[clamp(3rem,6vw,6.5rem)] font-semibold leading-[1.18] tracking-[-0.02em] text-[#fffaf2]`}
+              className={`${serif.className} mt-8 max-w-4xl text-[clamp(2.6rem,5vw,5.8rem)] font-semibold leading-[1.18] tracking-[-0.02em] text-[#fffaf2]`}
             >
               塗装で守るのは、
               <br />
@@ -122,7 +122,7 @@ export default function Hero() {
 
             {/* Strength */}
 
-            <div className="mt-14 grid max-w-3xl gap-8 sm:grid-cols-3">
+            <div className="mt-14 grid max-w-4xl gap-8 sm:grid-cols-3">
               {strengths.map((item) => {
                 const Icon = item.icon;
 
@@ -173,10 +173,10 @@ export default function Hero() {
           <div className="grid gap-5 lg:justify-items-end">
             <aside
               aria-label="施工実績"
-              className="w-full max-w-[430px] rounded-2xl border border-[#c9a96a]/30 bg-[#081d16]/75 p-8 shadow-[0_30px_90px_rgba(0,0,0,.42)] backdrop-blur-md"
+              className="w-full max-w-[380px] rounded-2xl border border-[#c9a96a]/30 bg-[#081d16]/75 p-6 shadow-[0_30px_90px_rgba(0,0,0,.42)] backdrop-blur-md"
             >
               <div className="flex items-center justify-between">
-                <p className="text-xs font-semibold tracking-[0.18em] text-[#d6b16f]">
+                <p className="text-[11px] font-semibold tracking-[0.18em] text-[#d6b16f]">
                   PERFORMANCE
                 </p>
 
@@ -195,11 +195,11 @@ export default function Hero() {
                     </p>
 
                     <p
-                      className={`${serif.className} mt-4 flex items-end text-5xl leading-none text-[#e6c985]`}
+                      className={`${serif.className} mt-4 flex items-end text-4xl leading-none text-[#e6c985]`}
                     >
                       <span>{item.value}</span>
 
-                      <span className="ml-2 whitespace-nowrap text-base font-sans text-[#fffaf2]">
+                      <span className="ml-2 whitespace-nowrap text-sm font-sans text-[#fffaf2]">
                         {item.unit}
                       </span>
                     </p>
@@ -214,7 +214,7 @@ export default function Hero() {
 
             <aside
               aria-label="保証内容"
-              className="w-full max-w-[430px] rounded-2xl border border-white/10 bg-white/[0.08] p-6 backdrop-blur-md"
+              className="w-full max-w-[380px] rounded-2xl border border-white/10 bg-white/[0.08] p-5 backdrop-blur-md"
             >
               <p className="text-xs font-semibold tracking-[0.22em] text-[#d6b16f]">
                 WARRANTY
@@ -222,7 +222,7 @@ export default function Hero() {
 
               <div className="mt-4 flex items-end justify-between gap-6">
                 <div>
-                  <p className={`${serif.className} text-3xl text-[#fffaf2]`}>
+                  <p className={`${serif.className} text-2xl text-[#fffaf2]`}>
                     最長10年保証
                   </p>
 
