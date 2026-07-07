@@ -107,7 +107,7 @@ export default function Hero() {
 
             <h1
               id="hero-title"
-              className={`${serif.className} mt-8 max-w-4xl text-[clamp(2.6rem,5vw,5.8rem)] font-semibold leading-[1.18] tracking-[-0.02em] text-[#fffaf2]`}
+              className={`${serif.className} mt-8 max-w-4xl text-[clamp(2.6rem,5vw,5.4rem)] font-semibold leading-[1.18] tracking-[-0.02em] text-[#fffaf2]`}
             >
               塗装で守るのは、
               <br />
@@ -150,7 +150,7 @@ export default function Hero() {
               <a
                 href="#contact"
                 aria-label="無料見積りへ進む"
-                className="inline-flex min-h-16 items-center justify-center gap-3 rounded-xl border border-[#c9a96a]/30 bg-[#005f3c] px-9 text-sm font-semibold text-white shadow-[0_24px_60px_rgba(0,0,0,.35)] transition-all duration-300 hover:-translate-y-1 hover:bg-[#0b7349] hover:shadow-2xl focus:outline-none focus:ring-2 focus:ring-[#d6b16f] focus:ring-offset-2 focus:ring-offset-[#06140f]"
+                className="inline-flex min-h-16 items-center justify-center gap-3 rounded-xl border border-[#c9a96a]/30 bg-[#005f3c] px-9 text-base font-semibold text-white shadow-[0_24px_60px_rgba(0,0,0,.35)] transition-all duration-300 hover:-translate-y-1 hover:bg-[#0b7349] hover:shadow-2xl focus:outline-none focus:ring-2 focus:ring-[#d6b16f] focus:ring-offset-2 focus:ring-offset-[#06140f]"
               >
                 <HiOutlineClipboardDocumentCheck className="h-5 w-5" />
                 無料相談・お見積り
@@ -160,7 +160,7 @@ export default function Hero() {
               <a
                 href="#works"
                 aria-label="施工事例を見る"
-                className="inline-flex min-h-16 items-center justify-center gap-3 rounded-xl border border-[#f8f3e8]/40 bg-black/15 px-9 text-sm font-semibold text-[#fffaf2] backdrop-blur-md transition-all duration-300 hover:-translate-y-1 hover:bg-white/10 hover:shadow-xl focus:outline-none focus:ring-2 focus:ring-[#d6b16f] focus:ring-offset-2 focus:ring-offset-[#06140f]"
+                className="inline-flex min-h-16 items-center justify-center gap-3 rounded-xl border border-[#f8f3e8]/40 bg-black/15 px-9 text-base font-semibold text-[#fffaf2] backdrop-blur-md transition-all duration-300 hover:-translate-y-1 hover:bg-white/10 hover:shadow-xl focus:outline-none focus:ring-2 focus:ring-[#d6b16f] focus:ring-offset-2 focus:ring-offset-[#06140f]"
               >
                 施工事例を見る
                 <HiArrowRight className="h-5 w-5 transition-transform duration-300 group-hover:translate-x-1" />
