@@ -25,7 +25,7 @@ const features = [
 
 export default function Features() {
   return (
-    <section className="bg-zinc-50 py-24">
+    <section id="features" className="scroll-mt-20 bg-zinc-50 py-24">
       <FadeIn>
         <div className="mx-auto max-w-7xl px-6">
           <div className="mx-auto max-w-3xl text-center">

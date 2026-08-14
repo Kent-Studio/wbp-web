@@ -146,11 +146,11 @@ export default function Hero() {
 
             {/* CTA */}
 
-            <div className="mt-14 flex flex-col gap-4 sm:flex-row">
+            <div className="mt-14 flex flex-col items-center gap-4 sm:flex-row sm:items-stretch sm:justify-start">
               <a
                 href="#contact"
                 aria-label="無料見積りへ進む"
-                className="inline-flex min-h-16 items-center justify-center gap-3 rounded-xl border border-[#c9a96a]/30 bg-[#005f3c] px-9 text-base font-semibold text-white shadow-[0_24px_60px_rgba(0,0,0,.35)] transition-all duration-300 hover:-translate-y-1 hover:bg-[#0b7349] hover:shadow-2xl focus:outline-none focus:ring-2 focus:ring-[#d6b16f] focus:ring-offset-2 focus:ring-offset-[#06140f]"
+                className="group inline-flex min-h-16 w-full max-w-[340px] items-center justify-center gap-3 rounded-xl border border-[#c9a96a]/30 bg-[#005f3c] px-9 text-sm font-semibold text-white shadow-[0_24px_60px_rgba(0,0,0,.35)] transition-all duration-300 hover:-translate-y-1 hover:bg-[#0b7349] hover:shadow-2xl focus:outline-none focus:ring-2 focus:ring-[#d6b16f] focus:ring-offset-2 focus:ring-offset-[#06140f] sm:w-auto sm:max-w-none"
               >
                 <HiOutlineClipboardDocumentCheck className="h-5 w-5" />
                 無料相談・お見積り
@@ -160,7 +160,7 @@ export default function Hero() {
               <a
                 href="#works"
                 aria-label="施工事例を見る"
-                className="inline-flex min-h-16 items-center justify-center gap-3 rounded-xl border border-[#f8f3e8]/40 bg-black/15 px-9 text-base font-semibold text-[#fffaf2] backdrop-blur-md transition-all duration-300 hover:-translate-y-1 hover:bg-white/10 hover:shadow-xl focus:outline-none focus:ring-2 focus:ring-[#d6b16f] focus:ring-offset-2 focus:ring-offset-[#06140f]"
+                className="group inline-flex min-h-16 w-full max-w-[340px] items-center justify-center gap-3 rounded-xl border border-[#f8f3e8]/40 bg-black/15 px-9 text-sm font-semibold text-[#fffaf2] backdrop-blur-md transition-all duration-300 hover:-translate-y-1 hover:bg-white/10 hover:shadow-xl focus:outline-none focus:ring-2 focus:ring-[#d6b16f] focus:ring-offset-2 focus:ring-offset-[#06140f] sm:w-auto sm:max-w-none"
               >
                 施工事例を見る
                 <HiArrowRight className="h-5 w-5 transition-transform duration-300 group-hover:translate-x-1" />
@@ -170,7 +170,7 @@ export default function Hero() {
 
           {/* Right */}
 
-          <div className="grid gap-5 lg:justify-items-end">
+          <div className="grid justify-items-center gap-5 sm:justify-items-start lg:justify-items-end">
             <aside
               aria-label="施工実績"
               className="w-full max-w-[380px] rounded-2xl border border-[#c9a96a]/30 bg-[#081d16]/75 p-6 shadow-[0_30px_90px_rgba(0,0,0,.42)] backdrop-blur-md"
@@ -244,7 +244,7 @@ export default function Hero() {
 
       {/* Scroll */}
 
-      <div className="absolute bottom-6 left-1/2 z-10 hidden -translate-x-1/2 md:block">
+      <div className="absolute bottom-6 left-1/2 z-10 hidden -translate-x-1/2 lg:block">
         <div className="text-center text-[10px] font-medium tracking-[0.35em] text-[#f8f3e8]/70">
           SCROLL
         </div>

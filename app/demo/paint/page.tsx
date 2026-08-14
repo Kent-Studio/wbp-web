@@ -14,7 +14,6 @@ export default function PaintPage() {
   return (
     <>
       <Header />
-
       <main>
         <Hero />
         <Features />
