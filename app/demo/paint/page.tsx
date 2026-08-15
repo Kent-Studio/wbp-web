@@ -1,4 +1,5 @@
 import Hero from "@/components/paint/Hero";
+import PerformanceCards from "@/components/paint/PerformanceCards";
 import Features from "@/components/paint/Features";
 import Works from "@/components/paint/Works";
 import Reviews from "@/components/paint/Reviews";
@@ -16,6 +17,12 @@ export default function PaintPage() {
       <Header />
       <main>
         <Hero />
+        <section
+          className="bg-[#06140f] px-6 pb-14 lg:hidden"
+          aria-label="施工実績と保証"
+        >
+          <PerformanceCards className="mx-auto max-w-[380px] justify-items-center" />
+        </section>
         <Features />
         <Works />
         <Reviews />

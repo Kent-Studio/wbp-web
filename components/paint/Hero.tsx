@@ -1,3 +1,4 @@
+import PerformanceCards from "@/components/paint/PerformanceCards";
 import Image from "next/image";
 import { Noto_Serif_JP } from "next/font/google";
 
@@ -55,15 +56,14 @@ export default function Hero() {
       aria-labelledby="hero-title"
       className="relative isolate min-h-screen min-h-[100svh] overflow-hidden bg-[#06140f] text-[#f8f3e8]"
     >
-      {/* Background Image */}
-
+      {/* Desktop Hero Image */}
       <Image
         src="/demo/paint/hero.png"
         alt="外壁を丁寧に塗装する職人"
         fill
         priority
         sizes="100vw"
-        className="object-cover object-[70%_center] scale-105 brightness-90 contrast-110"
+        className="object-cover object-[70%_center] brightness-90 contrast-110 scale-105"
       />
 
       {/* Dark Overlay */}
@@ -169,75 +169,8 @@ export default function Hero() {
           </div>
 
           {/* Right */}
-
-          <div className="grid justify-items-center gap-5 sm:justify-items-start lg:justify-items-end">
-            <aside
-              aria-label="施工実績"
-              className="w-full max-w-[380px] rounded-2xl border border-[#c9a96a]/30 bg-[#081d16]/75 p-6 shadow-[0_30px_90px_rgba(0,0,0,.42)] backdrop-blur-md"
-            >
-              <div className="flex items-center justify-between">
-                <p className="text-[11px] font-semibold tracking-[0.18em] text-[#d6b16f]">
-                  PERFORMANCE
-                </p>
-
-                <div className="flex gap-1 text-[#e4c77f]">
-                  {Array.from({ length: 5 }).map((_, i) => (
-                    <HiStar key={i} className="h-4 w-4" />
-                  ))}
-                </div>
-              </div>
-
-              <div className="mt-8 grid grid-cols-2 divide-x divide-[#c9a96a]/20">
-                {metrics.map((item) => (
-                  <div key={item.label} className="px-5 first:pl-0 last:pr-0">
-                    <p className="text-sm font-semibold text-[#d6b16f]">
-                      {item.label}
-                    </p>
-
-                    <p
-                      className={`${serif.className} mt-4 flex items-end text-4xl leading-none text-[#e6c985]`}
-                    >
-                      <span>{item.value}</span>
-
-                      <span className="ml-2 whitespace-nowrap text-sm font-sans text-[#fffaf2]">
-                        {item.unit}
-                      </span>
-                    </p>
-                  </div>
-                ))}
-              </div>
-
-              <p className="mt-6 text-right text-xs leading-5 text-[#f3ead8]/60">
-                ※2026年度 デモサイト掲載用データ
-              </p>
-            </aside>
-
-            <aside
-              aria-label="保証内容"
-              className="w-full max-w-[380px] rounded-2xl border border-white/10 bg-white/[0.08] p-5 backdrop-blur-md"
-            >
-              <p className="text-xs font-semibold tracking-[0.22em] text-[#d6b16f]">
-                WARRANTY
-              </p>
-
-              <div className="mt-4 flex items-end justify-between gap-6">
-                <div>
-                  <p className={`${serif.className} text-2xl text-[#fffaf2]`}>
-                    最長10年保証
-                  </p>
-
-                  <p className="mt-3 text-sm leading-7 text-[#f3ead8]/75">
-                    施工後の定期点検から
-                    <br />
-                    アフターサポートまで対応
-                  </p>
-                </div>
-
-                <div className="rounded-full border border-[#d6b16f]/30 p-4">
-                  <HiOutlineShieldCheck className="h-9 w-9 text-[#e6c985]" />
-                </div>
-              </div>
-            </aside>
+          <div className="hidden lg:block">
+            <PerformanceCards className="justify-items-end" />
           </div>
         </div>
       </div>
